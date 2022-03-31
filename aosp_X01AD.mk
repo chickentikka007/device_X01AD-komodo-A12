@@ -21,11 +21,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from X01AD device
 $(call inherit-product, device/asus/X01AD/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit Pixel Experience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+
+# PixelExperience specifics
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
 # Device identifiers.
 PRODUCT_NAME := lineage_X01AD
@@ -41,6 +46,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=X01A_1
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="msm8953_64-user 10 WW_Phone-202005071625 17.2018.2004.31-20200507 release-keys"
+    PRIVATE_BUILD_DESC="redfin-user 12 SP2A.220305.012 8177914 release-keys"
 
-BUILD_FINGERPRINT := "asus/WW_X01AD/ASUS_X01A_1:10/WW_Phone-202005071625/17.2018.2004.31-20200507:user/release-keys"
+BUILD_FINGERPRINT := "google/redfin/redfin:12/SP2A.220305.012/8177914:user/release-keys"
