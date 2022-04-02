@@ -213,5 +213,8 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Inherit from the proprietary version
 include vendor/asus/X01AD/BoardConfigVendor.mk
