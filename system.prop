@@ -137,7 +137,16 @@ persist.mm.sta.enable=0
 
 #property to enable fingerprint
 persist.qfp=false
+# Dex
 dalvik.vm.dex2oat64.enabled=true
+persist.bg.dexopt.enable=true
+dalvik.vm.dexopt.secondary=true
+pm.dexopt.install=speed-profile
+pm.dexopt.bg-dexopt=speed-profile
+pm.dexopt.boot=verify
+pm.dexopt.first-boot=quicken
+dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5
+dalvik.vm.dex2oat-threads=6
 
 # set cutoff voltage to 3400mV
 ro.cutoff_voltage_mv=3400
